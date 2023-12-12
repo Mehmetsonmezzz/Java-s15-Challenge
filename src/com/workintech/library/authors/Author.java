@@ -2,6 +2,7 @@ package com.workintech.library.authors;
 
 import com.workintech.library.books.Book;;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
@@ -11,12 +12,19 @@ public class Author {
     private String name;
     private List<Book> books;
 
-    public Author(long id, String name, List<Book> books) {
+    public Author(long id, String name) {
         this.id = id;
-        this.books = books;
+        this.books = new ArrayList<>();
         this.name=name;
     }
 
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
 
     public long getId() {
         return id;

@@ -10,15 +10,27 @@ public abstract class Book {
     private Author author;
 
     private int page;
+    private boolean isBorrowed;
 
-
-    public Book(long id, String name, Author author,  int page, boolean isPublic) {
+    public Book(long id, String name, Author author,  int page, boolean isBorrowed) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.page = page;
+        this.isBorrowed=isBorrowed;
     }
 
+    public boolean isBorrowed() {
+        return isBorrowed;
+    }
+
+    public void borrowBook() {
+        this.isBorrowed = true;
+    }
+
+    public void returnBook() {
+        this.isBorrowed = false;
+    }
 
     public long getId() {
         return id;

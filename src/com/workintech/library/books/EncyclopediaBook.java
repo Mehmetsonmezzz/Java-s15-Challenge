@@ -4,7 +4,7 @@ import com.workintech.library.Enums.NovelCategory;
 import com.workintech.library.authors.Author;
 
 public class EncyclopediaBook extends Book {
-    public EncyclopediaBook(long id, String name, Author author, int page, boolean isPublic) {
-        super(id, name, author, page, isPublic);
+    public EncyclopediaBook(long id, String name, Author author, int page, boolean isBorrowed) {
+        super(id, name, author, page, isBorrowed);
     }
 }

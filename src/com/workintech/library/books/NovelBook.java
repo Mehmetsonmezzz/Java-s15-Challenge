@@ -5,8 +5,12 @@ import com.workintech.library.authors.Author;
 
 public class NovelBook extends Book {
     private NovelCategory novelCategory;
-    public NovelBook(long id, String name, Author author, NovelCategory novelCategory, int page, boolean isPublic) {
-        super(id, name, author, page, isPublic);
+    public NovelBook(long id, String name, Author author, NovelCategory novelCategory, int page, boolean isBorrowed) {
+        super(id, name, author, page,isBorrowed);
         this.novelCategory = novelCategory;
+    }
+
+    public NovelCategory getNovelCategory() {
+        return novelCategory;
     }
 }
